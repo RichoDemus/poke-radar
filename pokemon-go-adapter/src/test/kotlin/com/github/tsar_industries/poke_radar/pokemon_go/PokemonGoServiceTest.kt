@@ -8,6 +8,6 @@ class PokemonGoServiceTest {
     @Ignore
     @Test
     fun shouldReturnUsername() {
-        Assertions.assertThat(PokemonGoService().getUsername("", "")).isEqualTo("")
+//        Assertions.assertThat(PokemonGoService().getUsername("", "")).isEqualTo("")
     }
 }
