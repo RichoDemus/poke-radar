@@ -7,8 +7,8 @@ import com.google.inject.AbstractModule
 
 internal class GuiceModule : AbstractModule() {
     override fun configure() {
-        bind(Username::class.java).toInstance(Username(""))
-        bind(Password::class.java).toInstance(Password(""))
+        bind(Username::class.java).toInstance(Username("netent4"))
+        bind(Password::class.java).toInstance(Password("qwer1234"))
         bind(Location::class.java).toInstance(Location(59.337042, 18.064270, 0.0))
     }
 

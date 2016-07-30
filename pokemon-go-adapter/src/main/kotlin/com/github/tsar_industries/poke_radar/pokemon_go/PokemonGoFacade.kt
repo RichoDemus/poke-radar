@@ -1,10 +1,12 @@
 package com.github.tsar_industries.poke_radar.pokemon_go
 
+import org.slf4j.LoggerFactory
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class PokemonGoFacade {
+    private val logger = LoggerFactory.getLogger(this.javaClass)
     private val FIVE_MINUTES: Long = 1000 * 60 * 5
     private val username: Username
     private val password: Password
@@ -53,6 +55,7 @@ class PokemonGoFacade {
 
     private fun updatePokemonMap() {
         catchablePokemons = api?.getCatchablePokemons()
+        logger.info("Nearby pokemon: {}", catchablePokemons)
     }
 
     fun isHealthy():Boolean {

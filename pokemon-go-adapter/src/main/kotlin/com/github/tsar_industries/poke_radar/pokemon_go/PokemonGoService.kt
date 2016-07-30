@@ -3,12 +3,13 @@ package com.github.tsar_industries.poke_radar.pokemon_go
 import com.pokegoapi.api.PokemonGo
 import com.pokegoapi.auth.PtcCredentialProvider
 import okhttp3.OkHttpClient
+import javax.inject.Inject
 
 
 open class PokemonGoService {
     val pokemonApi: PokemonGo
 
-
+    @Inject
     constructor(username: Username, password: Password, location: Location) {
         val client = OkHttpClient()
         val provider = PtcCredentialProvider(client, username.value, password.value)
